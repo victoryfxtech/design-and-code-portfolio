@@ -1,2 +1,6 @@
-# design-and-code-portfolio
-Front-end developer &amp; graphic/logo designer portfolio – HTML, CSS, JavaScript, React, Figma, Illustrator, branding work
+# Alex Morgan
+
+A clean professional portfolio site concept with services, selected work, experience and contact sections.
+
+## Live demo
+Open `index.html` in a browser, or deploy this folder to GitHub Pages, Netlify, or Vercel.
