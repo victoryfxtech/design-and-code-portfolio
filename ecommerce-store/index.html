@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Luma Store</title><link rel="stylesheet" href="style.css"></head>
+<body><header><nav><a class="logo" href="#">LUMA</a><div class="navlinks"><a href="#shop">Shop</a><a href="#story">Our Story</a></div><button class="cart" onclick="toggleCart()">Cart <span id="count">0</span></button></nav></header>
+<section class="hero"><div><p>NEW SEASON 2026</p><h1>Modern essentials for everyday living.</h1><a href="#shop" class="btn">Shop Collection</a></div></section>
+<section id="shop" class="shop"><div class="section-head"><div><p>CURATED FOR YOU</p><h2>Featured products</h2></div><div class="filters"><button onclick="filter('all')">All</button><button onclick="filter('home')">Home</button><button onclick="filter('fashion')">Fashion</button></div></div><div id="products" class="products"></div></section>
+<section id="story" class="story"><h2>Designed with intention.</h2><p>Luma is a fictional modern lifestyle store concept focused on useful, beautiful products and a simple shopping experience.</p></section>
+<aside id="drawer"><button onclick="toggleCart()">×</button><h2>Your Cart</h2><div id="cart"></div><div class="total">Total: $<span id="total">0</span></div><button class="checkout" onclick="alert('Demo checkout — no payment is processed.')">Checkout</button></aside>
+<footer>© 2026 Luma Store • Portfolio Project</footer><script src="script.js"></script></body></html>
