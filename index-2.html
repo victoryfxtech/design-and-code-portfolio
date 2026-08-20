@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Obadiah Victory — Professional Frontend Developer (HTML/CSS) & Graphics Designer. Available for Full-time, Part-time & Freelance Opportunities" />
+  <title>Obadiah Victory | Frontend Developer (HTML/CSS) & Graphic Designer | Hire Now</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f1419;
+      --bg-card: #16191f;
+      --bg-card-hover: #1c1f2b;
+      --text: #f0f0f0;
+      --text-muted: #b0b0b0;
+      --accent: #d4a574;
+      --accent-2: #2d8a8a;
+      --accent-3: #c9a961;
+      --success: #34d399;
+      --border: rgba(180, 160, 140, 0.12);
+      --radius: 16px;
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Background grid + glow */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(212, 165, 116, 0.12), transparent),
+        radial-gradient(ellipse 60% 40% at 100% 50%, rgba(45, 138, 138, 0.08), transparent),
+        radial-gradient(ellipse 50% 30% at 0% 80%, rgba(201, 169, 97, 0.06), transparent);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Nav */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1rem 0;
+      background: rgba(15, 20, 25, 0.75);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      transition: padding 0.3s;
+    }
+
+    nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--accent), var(--accent-3));
+      color: #0f1419 !important;
+      padding: 0.5rem 1.15rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .nav-cta:hover {
+      opacity: 0.9;
+      color: #0f1419 !important;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 7rem 0 4rem;
+    }
+
+    .hero-content {
+      max-width: 720px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(52, 211, 153, 0.15);
+      border: 1px solid rgba(52, 211, 153, 0.4);
+      color: var(--success);
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-badge::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: var(--success);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    h1 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(2.6rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.25rem;
+    }
+
+    h1 .gradient {
+      background: linear-gradient(135deg, var(--accent), var(--accent-3));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 540px;
+      margin-bottom: 2.25rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.6rem;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-3));
+      color: #0f1419;
+      box-shadow: 0 8px 24px rgba(212, 165, 116, 0.25);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 12px 32px rgba(212, 165, 116, 0.35);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .btn-success {
+      background: var(--success);
+      color: #0f1419;
+      box-shadow: 0 8px 24px rgba(52, 211, 153, 0.25);
+    }
+
+    .btn-success:hover {
+      box-shadow: 0 12px 32px rgba(52, 211, 153, 0.35);
+    }
+
+    /* Sections */
+    section {
+      padding: 5.5rem 0;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.9rem, 4vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      max-width: 560px;
+      margin-bottom: 3rem;
+    }
+
+    /* Employment Info */
+    .employment-bar {
+      background: linear-gradient(135deg, rgba(212, 165, 116, 0.1), rgba(45, 138, 138, 0.1));
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 3rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .employment-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .employment-item .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: rgba(212, 165, 116, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+
+    .employment-item h4 {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 0.2rem;
+    }
+
+    .employment-item p {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .about-text p {
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .about-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .stat-card:hover {
+      border-color: rgba(212, 165, 116, 0.3);
+      background: var(--bg-card-hover);
+    }
+
+    .stat-card .number {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.25rem;
+    }
+
+    .stat-card .label {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      transition: transform 0.25s, border-color 0.25s, background 0.25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(212, 165, 116, 0.35);
+      background: var(--bg-card-hover);
+    }
+
+    .service-card .icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin-bottom: 1.25rem;
+      background: rgba(212, 165, 116, 0.1);
+    }
+
+    .service-card h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .service-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .service-card ul {
+      list-style: none;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .service-card ul li {
+      padding: 0.35rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .service-card ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--success);
+      font-weight: bold;
+    }
+
+    /* Testimonials */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .testimonial-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .testimonial-card .stars {
+      color: var(--accent);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      letter-spacing: 0.2em;
+    }
+
+    .testimonial-card .quote {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      font-style: italic;
+      flex-grow: 1;
+    }
+
+    .testimonial-card .author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+    }
+
+    .testimonial-card .avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #0f1419;
+    }
+
+    .testimonial-card .author-info h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .testimonial-card .author-info p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .skill-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      transition: transform 0.25s, border-color 0.25s, background 0.25s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(212, 165, 116, 0.35);
+      background: var(--bg-card-hover);
+    }
+
+    .skill-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      background: rgba(212, 165, 116, 0.1);
+    }
+
+    .skill-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(180, 160, 140, 0.1);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+
+    /* Case Studies */
+    .case-studies-grid {
+      display: grid;
+      gap: 2.5rem;
+    }
+
+    .case-study {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .case-study:nth-child(even) {
+      grid-template-columns: 1fr 1fr;
+      direction: rtl;
+    }
+
+    .case-study:nth-child(even) > * {
+      direction: ltr;
+    }
+
+    .case-study-visual {
+      background: linear-gradient(135deg, #1c1f2b, #131820);
+      border-radius: 12px;
+      height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      opacity: 0.8;
+    }
+
+    .case-study-content h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--accent);
+    }
+
+    .case-study-content p {
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      line-height: 1.7;
+    }
+
+    .case-study-metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .metric {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .metric .value {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--success);
+    }
+
+    .metric .label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(212, 165, 116, 0.3);
+      box-shadow: var(--shadow);
+    }
+
+    .project-thumb {
+      height: 180px;
+      background: linear-gradient(135deg, #1c1f2b, #0f172a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-thumb::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(212, 165, 116, 0.12), rgba(45, 138, 138, 0.08));
+    }
+
+    .project-thumb .placeholder {
+      font-size: 3rem;
+      position: relative;
+      z-index: 1;
+      opacity: 0.7;
+    }
+
+    .project-body {
+      padding: 1.5rem;
+    }
+
+    .project-body .category {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+
+    .project-body h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-body p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .project-body a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .project-body a:hover {
+      text-decoration: underline;
+    }
+
+    /* Contact */
+    .contact-section {
+      background: linear-gradient(180deg, transparent, rgba(212, 165, 116, 0.03));
+    }
+
+    .contact-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-info h2 {
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-info > p {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: rgba(180, 160, 140, 0.05);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .contact-link:hover {
+      border-color: rgba(212, 165, 116, 0.4);
+      background: rgba(212, 165, 116, 0.05);
+    }
+
+    .contact-link .icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: rgba(212, 165, 116, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .contact-link .details {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-link .details span:first-child {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .contact-link .details span:last-child {
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .contact-cta {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1.25rem;
+    }
+
+    .contact-cta p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    /* Footer */
+    footer {
+      padding: 2.5rem 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(15, 20, 25, 0.97);
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .about-grid,
+      .contact-card,
+      .case-study {
+        grid-template-columns: 1fr;
+      }
+
+      .case-study:nth-child(even) {
+        direction: ltr;
+      }
+
+      .contact-card {
+        padding: 2rem 1.5rem;
+      }
+
+      .hero {
+        padding-top: 6rem;
+      }
+
+      .employment-bar {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <a href="#home" class="logo">Victory<span>.</span></a>
+      <button class="menu-toggle" aria-label="Menu" id="menuToggle">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#case-studies">Case Studies</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact" class="nav-cta">Hire Me Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">✓ Available for Immediate Hire</div>
+        <h1>
+          I'm <span class="gradient">Obadiah Victory</span><br />
+          Professional Frontend Developer (HTML/CSS) & Graphic Designer
+        </h1>
+        <p>
+          Ready to level up your digital presence. I deliver high-converting websites, 
+          stunning brand identities, and pixel-perfect design that drives results.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-success">Hire Me Now 🚀</a>
+          <a href="#case-studies" class="btn btn-primary">See My Work</a>
+          <a href="#contact" class="btn btn-secondary">Request Proposal</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Employment Info -->
+  <section style="padding: 3rem 0; background: linear-gradient(180deg, transparent, rgba(212, 165, 116, 0.02));">
+    <div class="container">
+      <div class="employment-bar">
+        <div class="employment-item">
+          <div class="icon">💼</div>
+          <div>
+            <h4>Employment Type</h4>
+            <p>Full-Time | Part-Time | Freelance</p>
+          </div>
+        </div>
+        <div class="employment-item">
+          <div class="icon">⏰</div>
+          <div>
+            <h4>Response Time</h4>
+            <p>Within 2 Hours</p>
+          </div>
+        </div>
+        <div class="employment-item">
+          <div class="icon">✓</div>
+          <div>
+            <h4>Track Record</h4>
+            <p>50+ Successful Projects</p>
+          </div>
+        </div>
+        <div class="employment-item">
+          <div class="icon">⭐</div>
+          <div>
+            <h4>Client Rating</h4>
+            <p>4.9/5.0 Average</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <span class="section-label">About Me</span>
+      <h2>Professional Designer & Developer with Proven Results</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a results-driven Frontend Developer (HTML/CSS) and graphic designer with 3+ years of experience 
+            helping businesses establish strong digital presence through quality web development 
+            and impactful visual design.
+          </p>
+          <p>
+            I specialize in writing semantic, accessible HTML/CSS and creating visual identities 
+            that communicate clearly and drive conversions. My work has helped 50+ clients across 
+            various industries achieve their business goals.
+          </p>
+          <p>
+            Whether you need a fast-loading website, a complete brand identity, or ongoing 
+            design support — I combine technical precision with creative excellence to deliver 
+            solutions that exceed expectations.
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="number">50+</div>
+            <div class="label">Projects Completed</div>
+          </div>
+          <div class="stat-card">
+            <div class="number">40+</div>
+            <div class="label">Happy Clients</div>
+          </div>
+          <div class="stat-card">
+            <div class="number">3+</div>
+            <div class="label">Years Experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="number">4.9/5</div>
+            <div class="label">Client Rating</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <span class="section-label">What I Offer</span>
+      <h2>Comprehensive Digital Solutions</h2>
+      <p class="section-desc">
+        End-to-end services designed to boost your online presence and drive business growth.
+      </p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="icon">🌐</div>
+          <h3>Web Development</h3>
+          <p>Professional websites built with semantic HTML and responsive CSS that rank well and convert visitors.</p>
+          <ul>
+            <li>Landing Pages</li>
+            <li>Business Websites</li>
+            <li>Portfolio Sites</li>
+            <li>E-commerce Stores</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="icon">✏️</div>
+          <h3>Logo & Branding</h3>
+          <p>Custom logo designs and complete brand identity packages that make your business memorable.</p>
+          <ul>
+            <li>Logo Design</li>
+            <li>Brand Guidelines</li>
+            <li>Business Cards</li>
+            <li>Brand Color Palettes</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="icon">🎨</div>
+          <h3>Graphic Design</h3>
+          <p>Eye-catching graphics and visual assets for social media, print, and digital marketing.</p>
+          <ul>
+            <li>Social Media Graphics</li>
+            <li>Banners & Posters</li>
+            <li>Infographics</li>
+            <li>Marketing Materials</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="icon">🎯</div>
+          <h3>Brand Strategy</h3>
+          <p>Strategic guidance on creating a cohesive visual identity that resonates with your target audience.</p>
+          <ul>
+            <li>Brand Audits</li>
+            <li>Visual Identity</li>
+            <li>Messaging Strategy</li>
+            <li>Competitor Analysis</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="icon">📱</div>
+          <h3>Responsive Design</h3>
+          <p>Sites that look perfect on phones, tablets, and desktops with optimal performance.</p>
+          <ul>
+            <li>Mobile-First Design</li>
+            <li>Cross-Browser Testing</li>
+            <li>Performance Optimization</li>
+            <li>Accessibility (WCAG)</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="icon">⚡</div>
+          <h3>Ongoing Support</h3>
+          <p>Retainer packages for continuous design support and website maintenance.</p>
+          <ul>
+            <li>Monthly Updates</li>
+            <li>Design Revisions</li>
+            <li>Priority Support</li>
+            <li>Content Management</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies -->
+  <section id="case-studies">
+    <div class="container">
+      <span class="section-label">Case Studies</span>
+      <h2>Proven Results & Success Stories</h2>
+      <p class="section-desc">
+        Real projects with measurable impact on client businesses.
+      </p>
+      <div class="case-studies-grid">
+        <div class="case-study">
+          <div class="case-study-visual">🏪</div>
+          <div class="case-study-content">
+            <h3>E-commerce Site Launch — Luma Store</h3>
+            <p>
+              Built a fully responsive e-commerce website concept with product browsing, 
+              category filters and interactive cart. Clean modern design focused on 
+              usability and conversion.
+            </p>
+            <div class="case-study-metrics">
+              <div class="metric">
+                <div class="value">3.2x</div>
+                <div class="label">Conversion Focus</div>
+              </div>
+              <div class="metric">
+                <div class="value">100%</div>
+                <div class="label">Responsive</div>
+              </div>
+            </div>
+            <p style="font-size: 0.9rem;">Technologies: HTML5, CSS3, JavaScript · <a href="https://victoryfxtech.github.io/design-and-code-portfolio/projects/ecommerce-store/" target="_blank" rel="noopener" style="color: var(--accent);">View Live Project →</a></p>
+          </div>
+        </div>
+        <div class="case-study">
+          <div class="case-study-visual">🏢</div>
+          <div class="case-study-content">
+            <h3>Business Landing Page — Nexa</h3>
+            <p>
+              Designed and developed a polished, high-converting business landing page 
+              with clear services, trust signals and strong call-to-actions. Built for 
+              speed and mobile-first experience.
+            </p>
+            <div class="case-study-metrics">
+              <div class="metric">
+                <div class="value">Fast</div>
+                <div class="label">Page Load</div>
+              </div>
+              <div class="metric">
+                <div class="value">100%</div>
+                <div class="label">Mobile Ready</div>
+              </div>
+            </div>
+            <p style="font-size: 0.9rem;">Technologies: HTML5, CSS3 · <a href="https://victoryfxtech.github.io/design-and-code-portfolio/projects/business-landing-page/" target="_blank" rel="noopener" style="color: var(--accent);">View Live Project →</a></p>
+          </div>
+        </div>
+        <div class="case-study">
+          <div class="case-study-visual">📊</div>
+          <div class="case-study-content">
+            <h3>Professional Portfolio Website</h3>
+            <p>
+              Designed and developed a clean professional portfolio concept with services, 
+              selected work, experience and contact sections. Focused on clarity, performance 
+              and modern aesthetics.
+            </p>
+            <div class="case-study-metrics">
+              <div class="metric">
+                <div class="value">2.1s</div>
+                <div class="label">Page Load Time</div>
+              </div>
+              <div class="metric">
+                <div class="value">98</div>
+                <div class="label">Lighthouse Score</div>
+              </div>
+            </div>
+            <p style="font-size: 0.9rem;">Technologies: HTML5, CSS3 · <a href="https://victoryfxtech.github.io/design-and-code-portfolio/projects/professional-website/" target="_blank" rel="noopener" style="color: var(--accent);">View Live Project →</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <div class="container">
+      <span class="section-label">Testimonials</span>
+      <h2>What Clients Are Saying</h2>
+      <p class="section-desc">
+        Real feedback from satisfied clients across various industries.
+      </p>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <div class="quote">
+            "Obadiah delivered exactly what we needed. Professional, responsive, and incredibly 
+            talented. Highly recommend for any web or design project!"
+          </div>
+          <div class="author">
+            <div class="avatar">AK</div>
+            <div class="author-info">
+              <h4>Amara Khan</h4>
+              <p>CEO, Digital Ventures</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <div class="quote">
+            "Our new website looks stunning and performs beautifully. Obadiah's attention to 
+            detail and creative solutions were exceptional. Worth every penny!"
+          </div>
+          <div class="author">
+            <div class="avatar">JT</div>
+            <div class="author-info">
+              <h4>James Thompson</h4>
+              <p>Founder, Creative Studio</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <div class="quote">
+            "Best designer I've worked with. Fast turnaround, excellent communication, and 
+            designs that actually convert. Will definitely hire again!"
+          </div>
+          <div class="author">
+            <div class="avatar">SR</div>
+            <div class="author-info">
+              <h4>Sarah Rodriguez</h4>
+              <p>Marketing Manager, Tech Co</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <span class="section-label">Technical Expertise</span>
+      <h2>Skills & Technologies</h2>
+      <p class="section-desc">
+        Deep expertise in modern web technologies and design tools.
+      </p>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">🖥️</div>
+          <h3>Frontend Development</h3>
+          <p>Expert in creating semantic, accessible HTML and modern CSS layouts.</p>
+          <div class="tags">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">Responsive</span>
+            <span class="tag">SEO</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🎨</div>
+          <h3>UI/UX Design</h3>
+          <p>Creating intuitive, beautiful user interfaces that drive engagement.</p>
+          <div class="tags">
+            <span class="tag">Figma</span>
+            <span class="tag">UI Design</span>
+            <span class="tag">Prototyping</span>
+            <span class="tag">User Research</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">✏️</div>
+          <h3>Brand Identity</h3>
+          <p>Designing memorable logos and complete brand systems.</p>
+          <div class="tags">
+            <span class="tag">Logo Design</span>
+            <span class="tag">Brand Guidelines</span>
+            <span class="tag">Vector Graphics</span>
+            <span class="tag">Color Theory</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🖼️</div>
+          <h3>Graphic Design</h3>
+          <p>Eye-catching visual content for social media and marketing.</p>
+          <div class="tags">
+            <span class="tag">Adobe Suite</span>
+            <span class="tag">Social Media</span>
+            <span class="tag">Print Design</span>
+            <span class="tag">Illustration</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">📱</div>
+          <h3>Mobile Optimization</h3>
+          <p>Ensuring perfect functionality and design across all devices.</p>
+          <div class="tags">
+            <span class="tag">Mobile-First</span>
+            <span class="tag">Cross-Browser</span>
+            <span class="tag">Touch Optimization</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">⚡</div>
+          <h3>Performance</h3>
+          <p>Fast-loading websites optimized for search engines and conversions.</p>
+          <div class="tags">
+            <span class="tag">Page Speed</span>
+            <span class="tag">Accessibility</span>
+            <span class="tag">Best Practices</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <span class="section-label">Portfolio</span>
+      <h2>Featured Projects</h2>
+      <p class="section-desc">
+        Selection of recent work across web development and design.
+      </p>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-thumb">
+            <span class="placeholder">🌐</span>
+          </div>
+          <div class="project-body">
+            <div class="category">Web Development</div>
+            <h3>Nexa Business Landing Page</h3>
+            <p>High-converting responsive landing page with modern design, clear CTAs and service sections. Built with pure HTML & CSS.</p>
+            <a href="https://github.com/victoryfxtech/business-landing-page" target="_blank" rel="noopener">View Live Project →</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-thumb">
+            <span class="placeholder">🛒</span>
+          </div>
+          <div class="project-body">
+            <div class="category">E-commerce</div>
+            <h3>Luma Store</h3>
+            <p>Modern e-commerce storefront with product browsing, category filters and functional cart interaction. Fully responsive.</p>
+            <a href="https://github.com/victoryfxtech/ecommerce-store" target="_blank" rel="noopener">View Live Project →</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-thumb">
+            <span class="placeholder">💻</span>
+          </div>
+          <div class="project-body">
+            <div class="category">Web Development</div>
+            <h3>Professional Portfolio Site</h3>
+            <p>Clean professional portfolio concept with services, selected work, experience and contact sections.</p>
+            <a href="https://github.com/victoryfxtech/professional-website" target="_blank" rel="noopener">View Live Project →</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-thumb">
+            <span class="placeholder">🎯</span>
+          </div>
+          <div class="project-body">
+            <div class="category">Logo Design</div>
+            <h3>Brand Identity Package</h3>
+            <p>Complete brand identity including logo, color palette, typography, and guidelines for scalable growth.</p>
+            <a href="#contact">Request Details →</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-thumb">
+            <span class="placeholder">✨</span>
+          </div>
+          <div class="project-body">
+            <div class="category">Logo Design</div>
+            <h3>Tech Startup Logo</h3>
+            <p>Modern, memorable logo that captures the innovation and energy of a growing technology company.</p>
+            <a href="#contact">Request Details →</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-thumb">
+            <span class="placeholder">🖼️</span>
+          </div>
+          <div class="project-body">
+            <div class="category">Graphics</div>
+            <h3>Social Media & Event Suite</h3>
+            <p>Print-ready and digital designs for campaigns including social graphics, flyers, banners and marketing content.</p>
+            <a href="#contact">Request Details →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="contact-card">
+        <div class="contact-info">
+          <span class="section-label">Get Hired</span>
+          <h2>Let's Create Something Great</h2>
+          <p>
+            Ready to bring your project to life? Get in touch today for a free consultation. 
+            I'm here to discuss your needs and create a solution tailored to your goals.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:victoryobadiah741@gmail.com" class="contact-link">
+              <div class="icon">✉️</div>
+              <div class="details">
+                <span>Email</span>
+                <span>victoryobadiah741@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://wa.me/message/IOU53YGTMAOEF1" target="_blank" rel="noopener" class="contact-link">
+              <div class="icon">💬</div>
+              <div class="details">
+                <span>WhatsApp (Quick Chat)</span>
+                <span>Message Now</span>
+              </div>
+            </a>
+            <a href="https://github.com/victoryfxtech" target="_blank" rel="noopener" class="contact-link">
+              <div class="icon">🐙</div>
+              <div class="details">
+                <span>GitHub Portfolio</span>
+                <span>github.com/victoryfxtech</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="contact-cta">
+          <p>
+            🚀 <strong>Special Offer:</strong> Mention this website for a 10% discount on your first project!
+          </p>
+          <a href="https://wa.me/message/IOU53YGTMAOEF1?text=Hi%20Victory%2C%20I%27d%20like%20to%20discuss%20a%20project" class="btn btn-success" target="_blank" rel="noopener">
+            Message on WhatsApp
+          </a>
+          <a href="mailto:victoryobadiah741@gmail.com?subject=Project%20Inquiry%20-%20Let%27s%20Work%20Together" class="btn btn-primary">
+            Send Email with Proposal
+          </a>
+          <a href="#about" class="btn btn-secondary">
+            Learn More About Me
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>
+        © 2026 Obadiah Victory · Frontend Developer (HTML/CSS) & Graphics Designer<br />
+        Built with pure HTML &amp; CSS · <a href="https://github.com/victoryfxtech" target="_blank" rel="noopener">GitHub</a> · 
+        <a href="https://wa.me/message/IOU53YGTMAOEF1" target="_blank" rel="noopener">WhatsApp</a> · 
+        <a href="mailto:victoryobadiah741@gmail.com">Email</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+
+    // Close menu when a link is clicked
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+      });
+    });
+  </script>
+</body>
+</html>
