@@ -1,67 +1,61 @@
-# Hi there, I'm Obadiah Victory 👋
+# Obadiah Victory — Frontend Developer (HTML/CSS) & Graphic Designer
 
-**Frontend Developer (HTML/CSS) & Graphic/Logo Designer**
+Professional portfolio website showcasing front-end development and graphic/logo design work.
 
-I craft clean, responsive websites and memorable brand identities that help businesses stand out online.
+**Live Demo:**  
+https://victoryfxtech.github.io/design-and-code-portfolio/
 
-🌐 **Portfolio**: [victoryfxtech.github.io/design-and-code-portfolio](https://victoryfxtech.github.io/design-and-code-portfolio/)  
-📧 **Email**: [victoryobadiah741@gmail.com](mailto:victoryobadiah741@gmail.com)  
-💬 **WhatsApp**: [Message me](https://wa.me/message/IOU53YGTMAOEF1)
+## Featured Live Projects
 
----
-
-### 🚀 About Me
-- 💻 Frontend developer specializing in **HTML5, CSS3, responsive design** and clean, accessible code
-- 🎨 Graphic & logo designer creating brand identities, social media graphics, and marketing materials
-- 🛠️ Tools I love: **Figma, Adobe Illustrator, VS Code**
-- 📈 Focused on building fast-loading, conversion-oriented websites
-- 🌱 Currently improving my skills in **JavaScript & React**
-
----
-
-### 🛠️ Tech Stack & Skills
-
-**Frontend**  
-`HTML5` `CSS3` `JavaScript` `Responsive Design` `SEO Basics`
-
-**Design**  
-`Logo Design` `Brand Identity` `Figma` `Illustrator` `Social Media Graphics`
-
-**Other**  
-`Git & GitHub` `Performance Optimization` `Accessibility (WCAG)`
-
----
-
-### 📂 Featured Projects
-
-| Project | Description | Live Demo |
+| Project | Description | Live Link |
 |---------|-------------|-----------|
-| **Nexa Business** | High-converting responsive business landing page | [View Live](https://victoryfxtech.github.io/business-landing-page/) |
-| **Luma Store** | Modern e-commerce storefront with cart functionality | [View Live](https://victoryfxtech.github.io/ecommerce-store/) |
-| **Professional Portfolio** | Clean personal portfolio concept | [View Live](https://victoryfxtech.github.io/professional-website/) |
+| **Nexa Business** | Responsive business landing page | [View Live](https://victoryfxtech.github.io/design-and-code-portfolio/projects/business-landing-page/) |
+| **Luma Store** | E-commerce storefront with cart | [View Live](https://victoryfxtech.github.io/design-and-code-portfolio/projects/ecommerce-store/) |
+| **Professional Portfolio** | Clean personal portfolio concept | [View Live](https://victoryfxtech.github.io/design-and-code-portfolio/projects/professional-website/) |
 
-➡️ See more on my [full portfolio](https://victoryfxtech.github.io/design-and-code-portfolio/)
+## Skills
+- Frontend Development (HTML5, CSS3, Responsive Design)
+- Logo Design & Brand Identity
+- Graphic Design (Social Media, Marketing Materials)
+- UI/UX & Performance Optimization
+
+## Contact
+- Email: victoryobadiah741@gmail.com
+- WhatsApp: [Message Now](https://wa.me/message/IOU53YGTMAOEF1)
+- GitHub: [github.com/victoryfxtech](https://github.com/victoryfxtech)
 
 ---
 
-### 📊 GitHub Stats
+## How to Deploy This Portfolio on GitHub Pages
 
-![Victory's GitHub stats](https://github-readme-stats.vercel.app/api?username=victoryfxtech&show_icons=true&theme=radical)
+### Option A — Upload via GitHub Website (Easiest)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=victoryfxtech&layout=compact&theme=radical)
+1. Go to [github.com](https://github.com) and sign in to **victoryfxtech**.
+2. Click **+** → **New repository**.
+3. Name it e.g. `portfolio` or `obadiah-portfolio` (keep it public).
+4. Click **Create repository**.
+5. On the new repo page click **uploading an existing file**.
+6. Drag and drop **all files and folders** from this package:
+   - `index.html`
+   - `README.md`
+   - the entire `projects/` folder
+7. Click **Commit changes**.
+8. Go to **Settings → Pages**.
+9. Under **Source**, select branch `main` and folder `/ (root)`.
+10. Click **Save**.
+11. Wait 1–2 minutes. Your site will be live at:  
+    `https://victoryfxtech.github.io/portfolio/`  
+    (replace `portfolio` with your actual repo name)
 
----
+### Option B — Using Git (Recommended for updates)
 
-### 🤝 Let's Connect
+```bash
+# 1. Create the repo on GitHub first (empty), then:
+git clone https://github.com/victoryfxtech/YOUR-REPO-NAME.git
+cd YOUR-REPO-NAME
 
-I'm available for **full-time, part-time, or freelance** opportunities.
-
-- 💼 Looking for frontend development or graphic design work
-- ⚡ Fast response time (usually within 2 hours)
-- 🎯 Focused on delivering high-quality, results-driven work
-
-**Feel free to reach out!**
-
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:victoryobadiah741@gmail.com)
-[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/message/IOU53YGTMAOEF1)
-[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://victoryfxtech.github.io/design-and-code-portfolio/)
+# 2. Copy all files from this folder into the repo
+# 3. Then:
+git add .
+git commit -m "Add portfolio website with live projects"
+git push origin main
