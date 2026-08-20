@@ -9,9 +9,9 @@ Professional portfolio website showcasing front-end development and graphic/logo
 
 | Project | Description | Live Link |
 |---------|-------------|-----------|
-| **Nexa Business** | Responsive business landing page | [View Live](projects/business-landing-page/index.html) |
-| **Luma Store** | E-commerce storefront with cart | [View Live](projects/ecommerce-store/index.html) |
-| **Professional Portfolio** | Clean personal portfolio concept | [View Live](projects/professional-website/index.html) |
+| **Nexa Business** | Responsive business landing page | [View victoryfxtech/business-landing-page |
+| **Luma Store** | E-commerce storefront with cart | [View victoryfxtech/ecommerce-store |
+| **Professional Portfolio** | Clean personal portfolio concept | [View victoryfxtech/professional-website |
 
 ## Skills
 - Frontend Development (HTML5, CSS3, Responsive Design)
