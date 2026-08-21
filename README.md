@@ -9,9 +9,9 @@ https://victoryfxtech.github.io/design-and-code-portfolio/
 
 | Project | Description | Live Link |
 |---------|-------------|-----------|
-| **Nexa Business** | Responsive business landing page | [View Live](https://victoryfxtech.github.io/design-and-code-portfolio/projects/business-landing-page/) |
-| **Luma Store** | E-commerce storefront with cart | [View Live](https://victoryfxtech.github.io/design-and-code-portfolio/projects/ecommerce-store/) |
-| **Professional Portfolio** | Clean personal portfolio concept | [View Live](https://victoryfxtech.github.io/design-and-code-portfolio/projects/professional-website/) |
+| **Nexa Business** | Responsive business landing page | [View Live](https://victoryfxtech.github.io/business-landing-page/) |
+| **Luma Store** | E-commerce storefront with cart | [View Live](https://victoryfxtech.github.io/ecommerce-store/) |
+| **Professional Portfolio** | Clean personal portfolio concept | [View Live](https://victoryfxtech.github.io/professional-website/) |
 
 ## Skills
 - Frontend Development (HTML5, CSS3, Responsive Design)
