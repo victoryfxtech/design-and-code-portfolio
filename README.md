@@ -59,3 +59,20 @@ cd YOUR-REPO-NAME
 git add .
 git commit -m "Add portfolio website with live projects"
 git push origin main
+```
+
+Then enable GitHub Pages as in steps 8–11 above.
+
+### Live Project Links (already set)
+
+The portfolio uses absolute GitHub Pages URLs for the demo projects:
+
+```
+https://victoryfxtech.github.io/design-and-code-portfolio/projects/business-landing-page/
+https://victoryfxtech.github.io/design-and-code-portfolio/projects/ecommerce-store/
+https://victoryfxtech.github.io/design-and-code-portfolio/projects/professional-website/
+```
+
+---
+
+© 2026 Obadiah Victory
